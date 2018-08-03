@@ -1,7 +1,7 @@
 const { expect } = require('chai');
 const store = require('../src/index.js');
 
-describe('femtostore', function() {
+describe('yocto-flux', function() {
 	describe('#on, #emit', function() {
 		it('emit after on', function() {
       store.reset();

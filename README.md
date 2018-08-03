@@ -1,19 +1,19 @@
-# femtoflux
+# yocto-flux
 
-[![Build Status](https://travis-ci.org/luanpotter/femtoflux.svg?branch=master)](https://travis-ci.org/luanpotter/femtoflux) [![Coverage Status](https://coveralls.io/repos/github/luanpotter/femtoflux/badge.svg?branch=master)](https://coveralls.io/github/luanpotter/femtoflux?branch=master)
+[![Build Status](https://travis-ci.org/luanpotter/yocto-flux.svg?branch=master)](https://travis-ci.org/luanpotter/yocto-flux) [![Coverage Status](https://coveralls.io/repos/github/luanpotter/yocto-flux/badge.svg?branch=master)](https://coveralls.io/github/luanpotter/yocto-flux?branch=master)
 
-A femto-scale lightweight substitute for Flux/Redux.
+A yocto-scale lightweight substitute for Flux/Redux.
 
-femtoflux is a teeny-tiny event handler (emitter/receiver) that can be used as a very simple store for smaller applications.
+yocto-flux is a teeny-tiny event handler (emitter/receiver) that can be used as a very simple store for smaller applications.
 
-If you just want to bootstrap a page and don't want to add all the complexities and abstractions of Flux/Redux/Mobx, use femtoflux!
+If you just want to bootstrap a page and don't want to add all the complexities and abstractions of Flux/Redux/Mobx, use yocto-flux!
 
 ## Install
 
 Just drop it to your `packages.json`:
 
 ```bash
-    npm i --save femtoflux
+    npm i --save yocto-flux
 ```
 
 ## Simple Example
@@ -74,7 +74,7 @@ Don't forget to clear any registered callbacks on `componentWillUnmount` method!
 
 ## Want more?
 
-This is **very** simple. It's *femto* in size. So, 10^6 times smaller than nano (maybe not literally).
+This is **very** simple. It's *yocto* in size. So, 10^12 times smaller than nano (maybe not literally).
 
 If you have something bigger, this is hard to keep organized. I would suggest using a more complex and feature-full implementation of Flux/Redux/anything, starting with <a href="https://github.com/ohager/nanoflux">nanoflux</a> or the standard libs (from Facebook or others).
 

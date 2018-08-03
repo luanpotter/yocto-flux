@@ -1,7 +1,7 @@
 {
-  "name": "femtoflux",
+  "name": "yocto-flux",
   "version": "1.0.0",
-  "description": "A femto-scale lightweight substitute for Flux/Redux",
+  "description": "A yocto-scale lightweight substitute for Flux/Redux",
   "main": "src/index.js",
   "scripts": {
     "test": "mocha",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/luanpotter/femtoflux.git"
+    "url": "git+https://github.com/luanpotter/yocto-flux.git"
   },
   "keywords": [
     "flux",
     "redux",
     "store",
     "react",
-    "femto",
+    "yocto",
     "nano",
     "event",
     "handler",
@@ -26,9 +26,9 @@
   "author": "Luan Nico <luannico27@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/luanpotter/femtoflux/issues"
+    "url": "https://github.com/luanpotter/yocto-flux/issues"
   },
-  "homepage": "https://github.com/luanpotter/femtoflux#readme",
+  "homepage": "https://github.com/luanpotter/yocto-flux#readme",
   "devDependencies": {
     "chai": "^4.1.2",
     "coveralls": "^3.0.2",
