@@ -31,7 +31,7 @@ const store = {
         store.lasts[event] = { data };
     },
     get(event) {
-        return store.lasts[event];
+        return store.lasts[event].data;
     },
     clear(...ids) {
         ids.forEach(id => Object.keys(store.callbacks).forEach(key => store.callbacks[key] = store.callbacks[key].filter(e => e.id !== id)));

@@ -57,5 +57,20 @@ describe('femtostore', function() {
       expect(a1).to.eql([1, 1]);
       expect(a2).to.eql([2, 2, 2, 2, 2]);
 		});
+
+		it('emit only last previous', function() {
+      store.reset();
+
+      const a = [];
+
+      store.emit('event', 1);
+      store.emit('event', 2);
+      store.emit('event', 3);
+      store.on('event', v => a.push(v));
+      store.emit('event', 4);
+      store.emit('event', 5);
+
+      expect(a).to.eql([3, 4, 5]);
+		});
   });
 });
