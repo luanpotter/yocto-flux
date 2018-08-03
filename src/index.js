@@ -1,17 +1,19 @@
-const callbacks = {};
-const lasts = {};
-
 const store = {
+    callbacks: {},
+    lasts: {},
+    evt(event) {
+        store.callbacks[event] = store.callbacks[event] || [];
+        return store.callbacks[event];
+    },
     next(event, callback) {
         const id = Symbol();
-        callbacks[event] = callbacks[event] || [];
-        callbacks[event].push({id, callback});
+        store.evt(event).push({id, callback});
         return id;
     },
     on(event, callback) {
         const id = store.next(event, callback);
-        if (lasts[event]) {
-            callback(lasts[event].data);
+        if (store.lasts[event]) {
+            callback(store.lasts[event].data);
         }
         return id;
     },
@@ -25,15 +27,18 @@ const store = {
         });
     },
     emit(event, data) {
-        callbacks[event] = callbacks[event] || [];
-        callbacks[event].forEach(i => i.callback(data));
-        lasts[event] = { data };
+        store.evt(event).forEach(i => i.callback(data));
+        store.lasts[event] = { data };
     },
     get(event) {
-        return callbacks[event].last;
+        return store.lasts[event];
     },
     clear(...ids) {
-        ids.forEach(id => Object.keys(callbacks).forEach(key => callbacks[key] = callbacks[key].filter(e => e.id !== id)));
+        ids.forEach(id => Object.keys(store.callbacks).forEach(key => store.callbacks[key] = store.callbacks[key].filter(e => e.id !== id)));
+    },
+    reset() {
+      store.callbacks = {};
+      store.lasts = {};
     },
 };
 
