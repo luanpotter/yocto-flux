@@ -21,7 +21,7 @@ Just drop it to your `packages.json`:
 Just import the store anywhere you desire and either send a message with `emit` or register a callback with `on`:
 
 ```javascript
-    const store = require('store');
+    const store = require('yocto-flux');
 
     store.on('overlay', v => $('#overlay').toggle(v));
 
