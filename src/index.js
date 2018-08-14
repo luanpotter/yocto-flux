@@ -27,8 +27,8 @@ const store = {
 		});
 	},
 	emit(event, data) {
-		store.evt(event).forEach(i => i.callback(data));
 		store.lasts[event] = { data };
+		store.evt(event).forEach(i => i.callback(data));
 	},
 	get(event) {
 		return store.lasts[event] ? store.lasts[event].data : undefined;
