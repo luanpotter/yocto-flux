@@ -1,6 +1,6 @@
 # yocto-flux
 
-[![Build Status](https://travis-ci.org/luanpotter/yocto-flux.svg?branch=master)](https://travis-ci.org/luanpotter/yocto-flux) [![Coverage Status](https://coveralls.io/repos/github/luanpotter/yocto-flux/badge.svg?branch=master)](https://coveralls.io/github/luanpotter/yocto-flux?branch=master)
+[![npm version](https://badge.fury.io/js/yocto-flux.svg)](https://badge.fury.io/js/yocto-flux) [![Build Status](https://travis-ci.org/luanpotter/yocto-flux.svg?branch=master)](https://travis-ci.org/luanpotter/yocto-flux) [![Coverage Status](https://coveralls.io/repos/github/luanpotter/yocto-flux/badge.svg?branch=master)](https://coveralls.io/github/luanpotter/yocto-flux?branch=master)
 
 A yocto-scale lightweight substitute for Flux/Redux.
 
